@@ -19,7 +19,6 @@ namespace x64 {
 
 class X64Emitter;
 
-void RegisterSequences();
 bool SelectSequence(X64Emitter* e, const hir::Instr* i,
                     const hir::Instr** new_tail);
 
