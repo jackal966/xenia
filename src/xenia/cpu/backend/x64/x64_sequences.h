@@ -26,7 +26,7 @@ extern std::unordered_map<uint32_t, SequenceSelectFn> sequence_table;
 
 template <typename T>
 bool Register() {
-  sequence_table.insert({ T::head_key(), T::Select });
+  sequence_table.insert({T::head_key(), T::Select});
   return true;
 }
 

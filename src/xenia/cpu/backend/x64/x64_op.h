@@ -381,19 +381,19 @@ struct I<OPCODE, DEST, SRC1, SRC2, SRC3> : DestField<DEST> {
 template <typename T>
 static const T GetTempReg(X64Emitter& e);
 template <>
-static const Reg8 GetTempReg<Reg8>(X64Emitter& e) {
+const Reg8 GetTempReg<Reg8>(X64Emitter& e) {
   return e.al;
 }
 template <>
-static const Reg16 GetTempReg<Reg16>(X64Emitter& e) {
+const Reg16 GetTempReg<Reg16>(X64Emitter& e) {
   return e.ax;
 }
 template <>
-static const Reg32 GetTempReg<Reg32>(X64Emitter& e) {
+const Reg32 GetTempReg<Reg32>(X64Emitter& e) {
   return e.eax;
 }
 template <>
-static const Reg64 GetTempReg<Reg64>(X64Emitter& e) {
+const Reg64 GetTempReg<Reg64>(X64Emitter& e) {
   return e.rax;
 }
 
